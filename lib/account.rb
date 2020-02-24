@@ -11,7 +11,7 @@ class Account
   def deposit(amount)
     raise 'amount must be a positive number' if amount.negative?
 
-    @balance += amount
+    @balance += amount.to_f
     @transactions << record_creation(amount)
   end
 
@@ -20,7 +20,7 @@ class Account
 
     raise 'cannot withdraw more than the present funds' if balance < amount
 
-    @balance -= amount
+    @balance -= amount.to_f
     @transactions << record_creation(-amount)
   end
 

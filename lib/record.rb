@@ -11,9 +11,9 @@ class Record
 
   def log(amount)
     if amount.positive?
-      @credit += amount
+      @credit += amount.to_f
     elsif amount.negative?
-      @debit -= amount
+      @debit -= amount.to_f
     end
   end
 end

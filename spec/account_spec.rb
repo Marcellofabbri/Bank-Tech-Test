@@ -12,7 +12,7 @@ describe Account do
   describe '#deposit' do
     it 'lets a user add money to their account' do
       subject.deposit(20)
-      expect(subject.balance).to eq 20
+      expect(subject.balance).to eq 20.00
     end
 
     it 'does not work with negative amounts' do
@@ -29,7 +29,7 @@ describe Account do
     it 'lets a user withdraw money from their account' do
       subject.deposit(70)
       subject.withdraw(10)
-      expect(subject.balance).to eq 60
+      expect(subject.balance).to eq 60.00
     end
 
     it 'does not work with negative amounts' do
