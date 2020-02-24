@@ -8,3 +8,6 @@ AllCops:
   Exclude:
     - './Gemfile'
     - './spec/spec_helper.rb'
+
+Metrics/LineLength:
+  Max: 110
