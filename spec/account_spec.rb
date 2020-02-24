@@ -1,6 +1,8 @@
 require 'account'
 
 describe Account do
+  let(:time) { Time.new.strftime('%d/%m/%Y') }
+
   describe '#initialize' do
     it 'is initialized with a balance field set to zero upon instantiation' do
       expect(subject.balance).to eq 0
@@ -32,6 +34,12 @@ describe Account do
     it 'does not let withdrawal exceed the balance ' do
       subject.deposit(10)
       expect { subject.withdraw(11) }.to raise_error('cannot withdraw more than the present funds')
+    end
+  end
+
+  describe '#record_creation' do
+    it 'creates a record object which stores details about transaction' do
+      expect(subject.record_creation(20)).to be_kind_of Record
     end
   end
 end
