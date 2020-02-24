@@ -12,6 +12,9 @@ describe Account do
       subject.deposit(20)
       expect(subject.balance).to eq 20
     end
+
+    it 'does not work with negative amounts' do
+      expect { subject.deposit(-5) }.to raise_error('amount must be a positive number')
+    end
   end
 end
-

@@ -6,6 +6,8 @@ class Account
   end
 
   def deposit(amount)
+    raise 'amount must be a positive number' if amount.negative?
+
     @balance += amount
   end
 end
