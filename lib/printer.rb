@@ -12,6 +12,8 @@ class Printer
     puts records_retriever
   end
 
+  private
+
   def statement_header
     'date || credit || debit || balance'
   end

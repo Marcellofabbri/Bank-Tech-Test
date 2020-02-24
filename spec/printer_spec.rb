@@ -20,9 +20,6 @@ describe Printer do
       printer.account.withdraw(100)
       printer.account.transactions[0].date = '24/02/2020'
       printer.account.transactions[1].date = '25/02/2020'
-      expect(printer.statement_header).to eq('date || credit || debit || balance')
-      expect(printer.records_retriever).to eq('25/02/2020 ||  || 100.0 || 1900.0
-24/02/2020 || 2000.0 ||  || 2000.0')
       expect { printer.print_statement }.to output("date || credit || debit || balance\n25/02/2020 ||  || 100.0 || 1900.0\n24/02/2020 || 2000.0 ||  || 2000.0\n").to_stdout
     end
   end
