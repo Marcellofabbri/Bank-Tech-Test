@@ -1,12 +1,13 @@
 require_relative 'datestamper'
 
 class Record
-  attr_reader :date, :debit, :credit
+  attr_reader :date, :debit, :credit, :current_balance
 
-  def initialize
+  def initialize(balance)
     @date = Datestamper.datestamp
     @debit = 0
     @credit = 0
+    @current_balance = balance 
   end
 
   def log(amount)

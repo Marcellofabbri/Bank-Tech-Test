@@ -22,7 +22,7 @@ describe Printer do
 #   describe '#print_statement' do
 #     let(:account) { Account.new }
 
-#     it 'prints in a REPL the current statement of the account'
+#     it 'prints in a REPL the current statement of the account' do
 #       account.deposit(2000)
 #       account.withdraw(100)
 #       expect { subject.print_statement }.to output("date || credit || debit || balance

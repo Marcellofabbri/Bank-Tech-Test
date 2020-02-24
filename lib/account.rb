@@ -25,7 +25,7 @@ class Account
   end
 
   def record_creation(amount)
-    record = Record.new
+    record = Record.new(@balance)
     record.log(amount)
     record
   end
