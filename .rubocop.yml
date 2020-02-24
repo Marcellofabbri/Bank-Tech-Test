@@ -9,5 +9,8 @@ AllCops:
     - './Gemfile'
     - './spec/spec_helper.rb'
 
+Metrics/BlockLength:
+  Max: 110
+
 Metrics/LineLength:
   Max: 110

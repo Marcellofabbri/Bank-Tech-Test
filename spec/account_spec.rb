@@ -28,5 +28,10 @@ describe Account do
     it 'does not work with negative amounts' do
       expect { subject.withdraw(-5) }.to raise_error('amount must be a positive number')
     end
+
+    it 'does not let withdrawal exceed the balance ' do
+      subject.deposit(10)
+      expect { subject.withdraw(11) }.to raise_error('cannot withdraw more than the present funds')
+    end
   end
 end
