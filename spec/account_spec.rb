@@ -24,5 +24,9 @@ describe Account do
       subject.withdraw(10)
       expect(subject.balance).to eq 60
     end
+
+    it 'does not work with negative amounts' do
+      expect { subject.withdraw(-5) }.to raise_error('amount must be a positive number')
+    end
   end
 end
