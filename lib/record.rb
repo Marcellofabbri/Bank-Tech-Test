@@ -1,13 +1,14 @@
 require_relative 'datestamper'
 
 class Record
-  attr_reader :date, :debit, :credit, :current_balance
+  attr_reader :current_balance
+  attr_accessor :debit, :credit, :date
 
   def initialize(balance)
     @date = Datestamper.datestamp
     @debit = 0
     @credit = 0
-    @current_balance = balance 
+    @current_balance = balance
   end
 
   def log(amount)
@@ -16,5 +17,18 @@ class Record
     elsif amount.negative?
       @debit -= amount.to_f
     end
+  end
+
+  def render
+    # to render a credit or debit as empty string if 0
+    if debit == 0
+      @debit = ''
+    elsif credit == 0
+      @credit = ''
+    end
+  end
+
+  def stringify
+    @date.to_s + ' || ' + @credit.to_s + ' || ' + @debit.to_s + ' || ' + @current_balance.to_s
   end
 end

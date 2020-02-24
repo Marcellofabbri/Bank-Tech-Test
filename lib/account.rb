@@ -13,6 +13,7 @@ class Account
 
     @balance += amount.to_f
     @transactions << record_creation(amount)
+    @transactions = @transactions.reverse
   end
 
   def withdraw(amount)
