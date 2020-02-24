@@ -1,4 +1,4 @@
-require 'datestamper'
+require_relative 'datestamper'
 
 class Record
   attr_reader :date, :debit, :credit

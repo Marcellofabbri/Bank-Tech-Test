@@ -12,7 +12,7 @@ class Account
     raise 'amount must be a positive number' if amount.negative?
 
     @balance += amount
-    @transactions << Record.new.log(amount)
+    @transactions << record_creation(amount)
   end
 
   def withdraw(amount)
@@ -21,7 +21,7 @@ class Account
     raise 'cannot withdraw more than the present funds' if balance < amount
 
     @balance -= amount
-    @transactions << Record.new.log(-amount)
+    @transactions << record_creation(-amount)
   end
 
   def record_creation(amount)

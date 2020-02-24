@@ -18,6 +18,11 @@ describe Account do
     it 'does not work with negative amounts' do
       expect { subject.deposit(-5) }.to raise_error('amount must be a positive number')
     end
+
+    it 'adds a Record object to transactions field of Account' do
+      subject.deposit(20)
+      expect(subject.transactions.first).to be_kind_of Record
+    end
   end
 
   describe '#withdraw' do
@@ -34,6 +39,12 @@ describe Account do
     it 'does not let withdrawal exceed the balance ' do
       subject.deposit(10)
       expect { subject.withdraw(11) }.to raise_error('cannot withdraw more than the present funds')
+    end
+
+    it 'adds a Record object to transactions field of Account' do
+      subject.deposit(30)
+      subject.withdraw(20)
+      expect(subject.transactions.first).to be_kind_of Record
     end
   end
 
