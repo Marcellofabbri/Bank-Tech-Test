@@ -6,10 +6,10 @@ git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 # gem "rails"
 
-gem 'simplecov'
-
 gem 'rake'
+gem 'rspec'
 
 group :development, :test do
   gem 'rubocop', require: false
+  gem 'simplecov'
 end
