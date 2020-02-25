@@ -1,5 +1,5 @@
 # MAKERS ACADEMY - WEEK 10 - TECH TEST: "Bank"
-
+![Ruby](https://github.com/Marcellofabbri/Bank-Tech-Test/workflows/Ruby/badge.svg)
 [Link to the original repository](https://github.com/makersacademy/course/blob/master/individual_challenges/bank_tech_test.md)
 
 The test could be taken either in Ruby or JavaScript. This one is in __ruby__ (version 2.6.3).
