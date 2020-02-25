@@ -11,5 +11,6 @@ gem 'rspec'
 
 group :development, :test do
   gem 'rubocop', require: false
-  gem 'simplecov'
+  gem 'simplecov', require: false
+  gem 'simplecov-shields-badge', require: false
 end

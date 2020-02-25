@@ -37,6 +37,8 @@ GEM
       docile (~> 1.1)
       simplecov-html (~> 0.11)
     simplecov-html (0.12.1)
+    simplecov-shields-badge (0.1.0)
+      simplecov (~> 0.15)
     unicode-display_width (1.6.1)
 
 PLATFORMS
@@ -47,6 +49,7 @@ DEPENDENCIES
   rspec
   rubocop
   simplecov
+  simplecov-shields-badge
 
 BUNDLED WITH
    2.1.4

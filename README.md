@@ -5,14 +5,16 @@
 The test could be taken either in Ruby or JavaScript. This one is in __ruby__ (version 2.6.3).
 
 ### Gems
-Upon download, run `bundle install` to install all necessary testing gems (Rspec and SimpleCov). No other additional gems have been used apart from these two.
+Upon download, run `bundle install` to install all necessary testing gems (Rspec and SimpleCov and Rubocop). No other additional gems have been used apart from Rake, also going to be installed when running `bundle install`.
 
 ### Running tests
 To use __Rspec__ from the command line run `rspec`.
 __Rubocop__ is integrated with Rspec and will run whenever Rspec is called, and is an acceptance criterion for passing tests.
 To call Rubocop indipendently run `rubocop` from the command line.
+Running `rake` from the top level of the directory will also run Rspec.
 
 ### Coverage
+[![Coverage](https://USERNAME.github.io/REPO/badge.svg)](https://github.com/USERNAME/REPO)
 __SimpleCov__ is integrated with Rspec and will run whenever Rspec is called.
 
 ### The Program
