@@ -21,11 +21,8 @@ class Record
 
   def render
     # to render a credit or debit as empty string if 0
-    if debit == 0
-      @debit = ''
-    elsif credit == 0
-      @credit = ''
-    end
+    @debit = '' if debit == 0
+    @credit = '' if credit == 0
   end
 
   def stringify
