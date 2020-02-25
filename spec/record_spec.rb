@@ -1,5 +1,5 @@
-require 'datestamper'
 require 'record'
+require 'datestamper'
 
 describe Record do
   let(:time) { Time.new.strftime('%d/%m/%Y') }
