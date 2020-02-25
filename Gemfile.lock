@@ -10,6 +10,8 @@ GEM
       ast (~> 2.4.0)
     rainbow (3.0.0)
     rake (13.0.1)
+    repo-small-badge (0.2.7)
+      victor (~> 0.2.8)
     rexml (3.2.4)
     rspec (3.9.0)
       rspec-core (~> 3.9.0)
@@ -37,9 +39,11 @@ GEM
       docile (~> 1.1)
       simplecov-html (~> 0.11)
     simplecov-html (0.12.1)
-    simplecov-shields-badge (0.1.0)
-      simplecov (~> 0.15)
+    simplecov-small-badge (0.2.4)
+      repo-small-badge (~> 0.2.7)
+      simplecov (~> 0.17)
     unicode-display_width (1.6.1)
+    victor (0.2.8)
 
 PLATFORMS
   ruby
@@ -49,7 +53,7 @@ DEPENDENCIES
   rspec
   rubocop
   simplecov
-  simplecov-shields-badge
+  simplecov-small-badge
 
 BUNDLED WITH
    2.1.4

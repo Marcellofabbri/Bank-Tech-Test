@@ -14,7 +14,7 @@ To call Rubocop indipendently run `rubocop` from the command line.
 Running `rake` from the top level of the directory will also run Rspec.
 
 ### Coverage
-[![Coverage](https://USERNAME.github.io/REPO/badge.svg)](https://github.com/USERNAME/REPO)
+[![Coverage](https://Marcellofabbri.github.io/Bank-Tech-Test/badge.svg)](https://github.com/Marcellofabbri/Bank-Tech-Test)
 __SimpleCov__ is integrated with Rspec and will run whenever Rspec is called.
 
 ### The Program
