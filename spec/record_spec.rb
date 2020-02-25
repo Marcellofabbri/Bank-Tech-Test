@@ -27,4 +27,28 @@ describe Record do
       expect(record.credit).to eq 0.00
     end
   end
+
+  describe '#render' do
+    it 'changes the credit field to an empty string if zero' do
+      record = Record.new(200)
+      record.debit = 15
+      record.render
+      expect(record.credit).to eq ''
+    end
+
+    it 'changes the debit field to an empty string if zero' do
+      record = Record.new(200)
+      record.credit = 15
+      record.render
+      expect(record.debit).to eq ''
+    end
+  end
+
+  describe '#stringify' do
+    it 'returns a string with all the info about the record' do
+      record = Record.new(200)
+      record.debit = 15
+      expect(record.stringify).to eq record.date.to_s + ' || 0 || 15 || 200'
+    end
+  end
 end

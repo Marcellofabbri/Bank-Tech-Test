@@ -53,4 +53,21 @@ describe Account do
       expect(subject.record_creation(20)).to be_kind_of Record
     end
   end
+
+  describe '#render' do
+    it 'changes the credit or debit field to an empty string' do
+      record = Record.new(200)
+      record.debit = 15
+      record.render
+      expect(record.credit).to eq ''
+    end
+  end
+
+  describe '#stringify' do
+    it 'returns a string with all the info about the record' do
+      record = Record.new(200)
+      record.debit = 15
+      expect(record.stringify).to eq record.date.to_s + ' || 0 || 15 || 200'
+    end
+  end
 end
