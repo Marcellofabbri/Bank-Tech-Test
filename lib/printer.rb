@@ -13,12 +13,14 @@ class Printer
     puts records_retriever
   end
 
-  private
-
   def records_retriever
-    account.transactions.each { |record| record.render }
     array = []
-    account.transactions.reverse.each { |record| array.push(record.stringify) }
+    account.transactions.reverse.each do |record|
+      record.debit = '' if record.debit == 0
+      record.credit = '' if record.credit == 0
+      stringified_record = record.date.to_s + ' || ' + record.credit.to_s + ' || ' + record.debit.to_s + ' || ' + record.current_balance.to_s
+      array.push(stringified_record)
+    end
     array.join("\n")
   end
 end
