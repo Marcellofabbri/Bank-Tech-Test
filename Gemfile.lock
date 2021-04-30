@@ -12,7 +12,7 @@ GEM
     rake (13.0.1)
     repo-small-badge (0.2.7)
       victor (~> 0.2.8)
-    rexml (3.2.4)
+    rexml (3.2.5)
     rspec (3.9.0)
       rspec-core (~> 3.9.0)
       rspec-expectations (~> 3.9.0)
